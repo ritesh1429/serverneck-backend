@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     if (!apiKey) return res.status(500).json({ error: "Server API Key missing" });
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
 
     // 🦒 ServerNeck Custom Rules (Isse hum baad mein modify karenge)
    const systemInstruction = `
